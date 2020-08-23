@@ -22,12 +22,20 @@ public class Hand {
     } catch(InputMismatchException e) {
       this.hand = 0;
     }
-    System.out.println(this.hand);
   }
 
   public void setComputerHand() {
     Random random = new Random();
     this.hand = random.nextInt(3) + 1;
-    System.out.println(this.hand);
+  }
+
+  public String strHand() {
+    switch(this.hand) {
+      case 0: return "正しくない手を出しました";
+      case 1: return "✊";
+      case 2: return "✌️";
+      case 3: return "✋";
+    }
+    return "問題が発生しました";
   }
 }

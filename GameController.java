@@ -8,5 +8,9 @@ public class GameController {
 
     player.setPlayerHand();
     computer.setComputerHand();
+
+    System.out.println("--------じゃんけんぽん！--------");
+    System.out.println("あなた：" + player.strHand());
+    System.out.println("あいて：" + computer.strHand());
   }
 }
