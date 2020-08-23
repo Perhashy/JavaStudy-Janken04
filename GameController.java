@@ -35,6 +35,10 @@ public class GameController {
     System.out.println("--------------------------------");
     System.out.println("もう一度遊びますか？");
     System.out.print("(1：はい、2：いいえ)：");
-    nextGame = sc.nextInt();
+    try {
+      nextGame = sc.nextInt();
+    } catch(InputMismatchException e) {
+      System.exit(0);
+    }
   }
 }
