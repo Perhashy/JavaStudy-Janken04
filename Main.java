@@ -10,5 +10,6 @@ public class Main {
       GameController.game(player, computer);
       GameController.nextGame();
     } while(GameController.checkNext());
+    GameController.gameExit();
   }
 }
