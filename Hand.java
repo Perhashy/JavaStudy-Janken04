@@ -1,6 +1,7 @@
 package Janken04;
 
 import java.util.Scanner;
+import java.util.InputMismatchException;
 
 public class Hand {
   private int hand;
@@ -10,10 +11,14 @@ public class Hand {
 
     System.out.println("手を数字で入力してください");
     System.out.print("(1：グー、2：チョキ、3：パー)：");
-    int playerHand = sc.nextInt();
-    if (playerHand > 0 && playerHand <=3) {
-      this.hand = playerHand;
-    } else {
+    try{
+      int playerHand = sc.nextInt();
+      if (playerHand > 0 && playerHand <=3) {
+        this.hand = playerHand;
+      } else {
+        this.hand = 0;
+      }
+    } catch(InputMismatchException e) {
       this.hand = 0;
     }
     System.out.println(this.hand);
