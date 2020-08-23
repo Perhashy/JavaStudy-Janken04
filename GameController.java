@@ -1,10 +1,14 @@
 package Janken04;
 
+import java.util.Scanner;
+import java.util.InputMismatchException;
+
 public class GameController {
   protected static int gameCount = 1;
   protected static int drawCount = 0;
   protected static int winCount = 0;
   protected static int loseCount = 0;
+  protected static int nextGame;
 
   public static void game(Hand player, Hand computer) {
     System.out.println("================================");
@@ -24,5 +28,13 @@ public class GameController {
     System.out.println("勝ち：" + winCount + "回");
     System.out.println("負け：" + loseCount + "回");
     System.out.println("引き分け：" + drawCount + "回");
+  }
+
+  public static void nextGame() {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("--------------------------------");
+    System.out.println("もう一度遊びますか？");
+    System.out.print("(1：はい、2：いいえ)：");
+    nextGame = sc.nextInt();
   }
 }
