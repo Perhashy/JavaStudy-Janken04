@@ -2,6 +2,7 @@ package Janken04;
 
 import java.util.Scanner;
 import java.util.InputMismatchException;
+import java.util.Random;
 
 public class Hand {
   private int hand;
@@ -21,6 +22,12 @@ public class Hand {
     } catch(InputMismatchException e) {
       this.hand = 0;
     }
+    System.out.println(this.hand);
+  }
+
+  public void setComputerHand() {
+    Random random = new Random();
+    this.hand = random.nextInt(3) + 1;
     System.out.println(this.hand);
   }
 }
