@@ -17,7 +17,11 @@ public class Rule {
         (player == 3 && computer == 1)) {
           System.out.println("おめでとう！あなたの勝ちです！");
     } else {
-      System.out.println("残念！あなたの負けです");
+      if (player != 0) {
+        System.out.println("残念！あなたの負けです");
+      } else {
+        System.out.println("正しくない手を出しました。あなたの負けです");
+      }
     }
   }
 }
