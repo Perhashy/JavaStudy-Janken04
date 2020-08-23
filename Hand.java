@@ -29,6 +29,10 @@ public class Hand {
     this.hand = random.nextInt(3) + 1;
   }
 
+  public int getHand() {
+    return this.hand;
+  }
+
   public String strHand() {
     switch(this.hand) {
       case 0: return "正しくない手を出しました";
