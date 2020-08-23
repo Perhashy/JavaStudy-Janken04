@@ -6,7 +6,9 @@ public class Main {
     Hand computer = new Hand();
 
     System.out.println("じゃんけんを始めます！");
-    GameController.game(player, computer);
-    GameController.nextGame();
+    do {
+      GameController.game(player, computer);
+      GameController.nextGame();
+    } while(GameController.checkNext());
   }
 }

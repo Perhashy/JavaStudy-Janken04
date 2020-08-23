@@ -41,4 +41,13 @@ public class GameController {
       System.exit(0);
     }
   }
+
+  public static boolean checkNext() {
+    if (nextGame == 1) {
+      gameCount++;
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
